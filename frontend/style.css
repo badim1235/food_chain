@@ -1,0 +1,176 @@
+/* 1. 기본 설정 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* 2. 레이아웃 컨테이너 */
+.container {
+    display: flex;
+    height: 100%;
+    border: 2px solid #000;
+}
+
+/* --- 왼쪽 패널 (채팅) --- */
+.left-panel {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #000;
+}
+
+#chat-display {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-area {
+    height: 60px;
+    display: flex;
+    border-top: 2px solid #000;
+}
+
+#message-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+#send-btn {
+    width: 80px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#send-btn:hover {
+    background-color: #555;
+}
+
+/* --- 오른쪽 패널 (정보) --- */
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-info {
+    flex: 1;
+    border-bottom: 2px solid #000;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.player-list li {
+    list-style: none;
+    padding: 5px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.notepad-area {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+#memo-input {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: inherit;
+}
+
+/* --- 메시지 스타일 --- */
+.msg {
+    margin-bottom: 8px;
+}
+
+.msg.system {
+    color: blue;
+    font-weight: bold;
+}
+
+.msg.me {
+    color: #333;
+    text-align: right;
+}
+
+.msg.other {
+    color: #333;
+}
+
+/* --- 로그인 화면 스타일 --- */
+#login-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    display: flex; /* 정가운데 정렬 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 맨 위에 뜨도록 */
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border: 2px solid #000;
+    text-align: center;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+.login-box h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.login-box input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #333;
+    margin-right: 10px;
+}
+
+.login-box button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.login-box button:hover {
+    background-color: #555;
+}

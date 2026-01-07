@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더 지니어스: 먹이사슬</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="login-screen">
+        <div class="login-box">
+            <h1>🦁 먹이사슬 🐰</h1>
+            <p>더 지니어스 게임에 오신 것을 환영합니다.</p>
+            <input type="text" id="nickname-input" placeholder="닉네임을 입력하세요" autofocus>
+            <button id="join-btn">게임 입장</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left-panel">
+            <div id="chat-display">
+                <div class="msg system">📢 게임 서버에 연결되었습니다.</div>
+                <div class="msg system">📢 잠시 후 게임이 시작됩니다.</div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="message-input" placeholder="채팅 입력... (명령어: /이동, /공격)" autocomplete="off">
+                <button id="send-btn">전송</button>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="location-info">
+                <div class="section-title">현재 지역: <span id="current-location">대기실</span></div>
+                <h4>현재 지역의 생존자</h4>
+                <ul class="player-list" id="player-list">
+                    <li>접속 대기중...</li>
+                </ul>
+            </div>
+
+            <div class="notepad-area">
+                <div class="section-title">메모장</div>
+                <div style="font-size: 0.9em; color: gray; margin-bottom: 5px;">나만 볼 수 있습니다.</div>
+                <textarea id="memo-input" placeholder="예시) 플레이어1 사자 의심..."></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <script src="js/ui.js"></script>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
+</body>
+
+</html>
